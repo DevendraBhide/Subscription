@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 
+
 const Register = ({registration}) => {
   const[Email,setEmail]=useState('')
   const[Password,setPassword]=useState('')
@@ -9,6 +10,15 @@ const Register = ({registration}) => {
 
   const handleData=(e)=>{
     e.preventDefault();
+    const emailpattern=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if(!emailpattern.test(Email)){
+      alert(`Please enter Valid Email (example@gmail.com)`)
+      return;
+    }
+    if(Password.length<6){
+      alert("Password must be at least 6 character")
+      return;
+    }
     const start = startDate ? new Date(startDate) : null;
     const endDate=new Date(start);
     if(duration =='monthly'){
