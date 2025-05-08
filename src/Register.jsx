@@ -40,7 +40,7 @@ const Register = ({registration}) => {
       <input type="email" placeholder='Enter Your Name' className='form-control mb-3' required onChange={(e)=>setEmail(e.target.value)} />
 
       <label htmlFor="">Enter Your Password</label>
-      <input type="password" placeholder='Enter Your password' className='form-control mb-3'required onChange={(e)=>setPassword(e.target.value)}/>
+      <input type="password" placeholder='Enter Your password (must be atleast 6 character)' className='form-control mb-3'required onChange={(e)=>setPassword(e.target.value)}/>
 
       <label htmlFor="">Enter Start Date</label>
       <input type="date" placeholder='Enter start date' className='form-control mb-3' required onChange={(e)=>setStartDate(e.target.value)} />
